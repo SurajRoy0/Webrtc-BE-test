@@ -15,7 +15,7 @@ const server = http.createServer((req, res) => {
 // Create Socket.io server
 const io = new Server(server, {
   cors: {
-    origin: "*", 
+    origin: "https://webrtc-fe-test-1.onrender.com/", 
     methods: ["GET", "POST"],
     allowedHeaders: ["Content-Type"],
   },

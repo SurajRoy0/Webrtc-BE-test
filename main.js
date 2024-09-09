@@ -1,9 +1,13 @@
 import { Server } from "socket.io";
 
-const io = new Server(8000,{
-    cors: true,
+const server = http.createServer();
+const io = new Server(server, {
+  cors: {
+    origin: "*", 
+    methods: ["GET", "POST"],
+    allowedHeaders: ["Content-Type"],
+  },
 });
-
 const emailToSocketIdMap = new Map();
 const socketIdToEmailMap = new Map()
 
